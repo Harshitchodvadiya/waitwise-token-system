@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -30,7 +29,7 @@ const tokenHistory = [
 
 const Customer = () => {
   const { toast } = useToast();
-  const [activeTokens, setActiveTokens] = useState<any[]>([
+  const [activeTokens, setActiveTokens] = useState([
     {
       id: 't1',
       tokenNumber: 'A-103',
@@ -78,7 +77,7 @@ const Customer = () => {
     }
   };
 
-  const handleCancelToken = (tokenId: string) => {
+  const handleCancelToken = (tokenId) => {
     setActiveTokens(activeTokens.filter(token => token.id !== tokenId));
     
     toast({
@@ -88,7 +87,7 @@ const Customer = () => {
     });
   };
 
-  const handleRescheduleToken = (tokenId: string) => {
+  const handleRescheduleToken = (tokenId) => {
     setActiveTokens(activeTokens.map(token => {
       if (token.id === tokenId) {
         // Simulate rescheduling by adding positions

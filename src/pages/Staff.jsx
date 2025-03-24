@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -53,7 +52,7 @@ const Staff = () => {
   const [queue, setQueue] = useState(initialQueue);
   const [completedServices, setCompletedServices] = useState(completedServicesData);
   const [skippedTokens, setSkippedTokens] = useState(skippedTokensData);
-  const [currentToken, setCurrentToken] = useState<any | null>(null);
+  const [currentToken, setCurrentToken] = useState(null);
   const [selectedDate, setSelectedDate] = useState('Today');
   
   const handleCallNext = () => {
