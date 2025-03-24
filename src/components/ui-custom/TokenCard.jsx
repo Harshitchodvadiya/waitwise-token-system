@@ -29,7 +29,7 @@ const TokenCard = ({
   const getStatusText = () => {
     switch (status) {
       case 'waiting': return 'Waiting';
-      case 'called': return 'Called - It\'s your turn!';
+      case 'called': return "Called - It's your turn!";
       case 'skipped': return 'Skipped - Please check in';
       case 'completed': return 'Completed';
       default: return 'Waiting';
